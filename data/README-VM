@@ -1,0 +1,15 @@
+ALTERAR IPS
+
+sudo pip3 install confluent-kafka
+sudo chmod 777 /usr/bin/dumpcap
+mkdir saves
+sudo chmod -R ugo=rwx saves/
+sudo dumpcap -b filesize:100000 -q -g -w /home/pi/Desktop/saves/sensorx.pcap
+
+-- Scenario 3 --
+
+sudo bash -c 'echo 1 > /proc/sys/net/ipv4/ip_forward'
+sudo bash -c 'echo 1 > /proc/sys/net/ipv4/conf/all/forwarding'
+
+sudo arpspoof 192.168.0.10 -t 192.168.0.2 -r
+

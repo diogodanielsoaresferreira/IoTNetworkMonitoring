@@ -1,0 +1,39 @@
+sudo tunctl
+sudo ifconfig tap0 192.168.0.10 up
+sudo ifconfig tap0 hw ether 00:11:22:33:44:55
+
+sudo tunctl
+sudo ifconfig tap1 192.168.100.1 up
+
+sudo tunctl
+sudo ifconfig tap2 192.168.100.2 up
+
+sudo tunctl
+sudo ifconfig tap3 192.168.100.3 up
+
+sudo tunctl
+sudo ifconfig tap4 192.168.100.4 up
+
+sudo tunctl
+sudo ifconfig tap5 192.168.100.5 up
+
+sudo tunctl
+sudo ifconfig tap6 192.168.100.6 up
+
+sudo tunctl
+sudo ifconfig tap7 192.168.100.7 up
+
+sudo tunctl
+sudo ifconfig tap8 192.168.100.8 up
+
+sudo tunctl
+sudo ifconfig tap9 192.168.100.9 up
+
+sudo tunctl
+sudo ifconfig tap10 192.168.100.10 up
+
+#sudo route add -host 192.168.254.0 dev tap0
+
+## TO DELETE INTERFACE
+sudo tunctl -d tap0
+
